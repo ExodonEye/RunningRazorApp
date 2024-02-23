@@ -15,6 +15,21 @@ namespace RunLib.Repository
         public MemberRepository()
         {
             _members = new List<Member>();
+
+
+
+            _members.Add(new Member(001, "John Doe", "123-456-7890", "rød", 1000));
+            _members.Add(new Member(002, "Alice Smith", "987-654-3210", "sort", 1200));
+            _members.Add(new Member(003, "Emily Johnson", "555-555-5555", "grøn", 1500));
+            _members.Add(new Member(004, "Michael Brown", "111-222-3333", "orange", 1100));
+            _members.Add(new Member(005, "Sarah Wilson", "444-444-4444", "orange", 1300));
+            _members.Add(new Member(006, "David Lee", "666-666-6666", "rød", 1400));
+            _members.Add(new Member(007, "Jessica Martinez", "777-777-7777", "blå", 1200));
+            _members.Add(new Member(008, "Ryan Garcia", "888-888-8888", "gul", 1150));
+            _members.Add(new Member(009, "Samantha Taylor", "999-999-9999", "grøn", 1600));
+            _members.Add(new Member(010, "Andrew Clark", "000-000-0000", "blå", 1550));
+
+
         }
 
         /*

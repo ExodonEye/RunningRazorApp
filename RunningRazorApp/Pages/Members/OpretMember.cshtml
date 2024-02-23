@@ -1,0 +1,36 @@
+﻿@page
+@model RunningRazorApp.Pages.Members.OpretMemberModel
+@{
+}
+
+<h1>Biblotek af kroko</h1>
+
+
+
+@* Laver en form som har de nuværende oplysninger om kunden, men kan modtage en ny værdi hvis ændret *@
+<form method="post">
+    <div class="form-group>">
+        <label>Member Id</label><br />
+        <input class="form-control" asp-for="@Model.NewMemberId" /><br />
+        <label class="text text-danger">@Model.ErrorMessage</label><br />
+        <br />
+
+        <label>Member Name</label><br />
+        <input class="form-control" asp-for="@Model.NewMemberName" /><br />
+        <span asp-validation-for="@Model.NewMemberName" class="text-danger"></span><br />
+        <br />
+
+        <label>Member Telefon</label><br />
+        <input class="form-control" asp-for="@Model.NewMemberPhoneNumber" /><br />
+
+        <label>Member Team</label><br />
+        <input class="form-control" asp-for="@Model.NewMemberTeam" /><br />
+
+        <label>Member Price</label><br />
+        <input class="form-control" asp-for="@Model.NewMemberPrice" /><br />
+
+
+        <input type="submit" value="Opret Ny Kunde" class="btn btn-success" />
+        <input type="submit" value="Fortryd" class="btn btn-danger" asp-page-handler="Cancel" />
+    </div>
+</form>

@@ -35,17 +35,18 @@ namespace RunningRazorApp.Pages.Members
             Members = _memberRepo.GetAll();
         }
 
-        //Gør at man kan komme til NewCustomer siden
-        public IActionResult OnPostMember()
-        {
-            return RedirectToPage("NewMember");
-        }
+
 
         //Gør at man søger når man trykker på knappen
         public IActionResult OnPostSearch()
         {
             Members = _memberRepo.Search(SearchId, SearchName, SearchTeam);
             return Page();
+        }
+
+        public IActionResult OnPostMember()
+        {
+            return RedirectToPage("OpretMember");
         }
 
         //Kalder Sort efter ID
