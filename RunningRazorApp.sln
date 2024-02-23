@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34601.278
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunningRazorApp", "RunningRazorApp\RunningRazorApp.csproj", "{E058D3B5-09E8-48E6-A51E-5CD8DD3E2D69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunningRazorApp", "RunningRazorApp\RunningRazorApp.csproj", "{E058D3B5-09E8-48E6-A51E-5CD8DD3E2D69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RunLib", "RunLib\RunLib.csproj", "{96B40858-6E43-45DA-A2AC-E24BFE1CA4A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunLib", "RunLib\RunLib.csproj", "{96B40858-6E43-45DA-A2AC-E24BFE1CA4A7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

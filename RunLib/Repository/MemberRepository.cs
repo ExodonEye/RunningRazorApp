@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Linq;
 
 namespace RunLib.Repository
 {
@@ -84,6 +85,29 @@ namespace RunLib.Repository
         private int GenerateNextId()
         {
             return (_members.Count == 0) ? 1 : _members.Max(m => m.Id) + 1;
+        }
+
+        public List<Member> Search(int? id, string? name, string? team)
+        {
+            List<Member> retMembers = new List<Member>(GetAll());
+
+            if (id != null)
+            {
+                retMembers = retMembers.FindAll(m => m.Id == id);
+            }
+
+            if (name != null)
+            {
+                retMembers = retMembers.FindAll(m => m.Name.Contains(name));
+            }
+
+
+            if (team != null)
+            {
+                retMembers = retMembers.FindAll(m => m.Team.Contains(team));
+            }
+
+            return retMembers;
         }
 
 

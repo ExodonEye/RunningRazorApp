@@ -1,0 +1,65 @@
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using RunLib.Model;
+using RunLib.Repository;
+
+namespace RunningRazorApp.Pages.Members
+{
+    public class IndexModel : PageModel
+    {
+        // instans af kunde repository
+        private MemberRepository _memberRepo;
+
+        //Dependency Injection
+        public IndexModel(MemberRepository repository)
+        {
+            _memberRepo = repository;
+        }
+
+        // property til View'et
+        public List<Member> Members { get; set; }
+
+        // BindProperty til search funktion
+
+        [BindProperty]
+        public int? SearchId { get; set; }
+        [BindProperty]
+        public string? SearchName { get; set; }
+        [BindProperty]
+        public string? SearchTeam { get; set; }
+
+
+        //Hent alle kunder når siden læses
+        public void OnGet()
+        {
+            Members = _memberRepo.GetAll();
+        }
+
+        //Gør at man kan komme til NewCustomer siden
+        public IActionResult OnPostMember()
+        {
+            return RedirectToPage("NewMember");
+        }
+
+        //Gør at man søger når man trykker på knappen
+        public IActionResult OnPostSearch()
+        {
+            Members = _memberRepo.Search(SearchId, SearchName, SearchTeam);
+            return Page();
+        }
+
+        //Kalder Sort efter ID
+        //public IActionResult OnPostSortId()
+        //{
+        //    Customers = _customerRepo.SortId();
+        //    return Page();
+        //}
+
+        //Kalder sort efter navn
+        //public IActionResult OnPostSortName()
+        //{
+        //    Customers = _customerRepo.SortName();
+        //    return Page();
+        //}
+    }
+}
