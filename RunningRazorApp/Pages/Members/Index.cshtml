@@ -14,7 +14,7 @@
         <input type="submit" asp-page-handler="Search" value="Søg" class="btn btn-success" />
         MemberId <input type="number" asp-for="@Model.SearchId" />
         Navn <input type="text" asp-for="@Model.SearchName" />
-        <select asp-for="@Model.SearchTeam" class="form-select">
+        <select asp-for="@Model.SearchTeam" class="form-select-sm">
             <option value="" asp-for="@Model.SearchTeam"> Teams</option>
             <option value="orange" asp-for="@Model.SearchTeam"> Orange</option>
             <option value="sort" asp-for="@Model.SearchTeam"> Sort</option>
@@ -43,8 +43,8 @@
                     <td>@m.Id</td>
                     <td>@m.Name</td>
                     <td>@m.Team</td>
-                    <td><a asp-page="UpdateCustomer" asp-route-id="@m.Id">Ændre</a></td>
-                    <td><a asp-page="DeleteCustomer" asp-route-id="@m.Id">Slet</a></td>
+                    <td><a asp-page="UpdateMember" asp-route-id="@m.Id">Ændre</a></td>
+                    <td><a asp-page="DeleteMember" asp-route-id="@m.Id">Slet</a></td>
                 </tr>
             }
         </tbody>

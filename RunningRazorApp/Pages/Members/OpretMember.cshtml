@@ -14,13 +14,13 @@
         <label>Member Name</label><br />
         <input class="form-control" asp-for="@Model.NewMemberName" /><br />
         <span asp-validation-for="@Model.NewMemberName" class="text-danger"></span><br />
-        <br />
 
         <label>Member Telefon</label><br />
         <input class="form-control" asp-for="@Model.NewMemberPhoneNumber" value="xx xx xx xx" /><br />
 
-        <select asp-for="@Model.NewMemberTeam" class="form-control">
-            <option value="" asp-for="@Model.NewMemberTeam"> Teams</option>
+        <label>Member Team</label><br/>
+        <select asp-for="@Model.NewMemberTeam" class="form-select">
+            <option value="" asp-for="@Model.NewMemberTeam"></option>
             <option value="orange" asp-for="@Model.NewMemberTeam"> Orange</option>
             <option value="sort" asp-for="@Model.NewMemberTeam"> Sort</option>
             <option value="blå" asp-for="@Model.NewMemberTeam"> Blå</option>
@@ -31,7 +31,7 @@
         <br/>
 
         <label>Member Price</label><br />
-        <input class="form-control" asp-for="@Model.NewMemberPrice" /><br />
+        <input class="form-control" asp-for="@Model.NewMemberPrice" value="minimum 50"/><br />
 
 
         <input type="submit" value="Opret Ny Kunde" class="btn btn-success" />
