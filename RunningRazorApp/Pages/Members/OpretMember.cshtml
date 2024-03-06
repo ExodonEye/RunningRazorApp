@@ -12,18 +12,13 @@
     <div class="form-group>">
 
         <label>Member Name</label><br />
-<<<<<<< HEAD
-        <input class="form-control" asp-for="@Model.NewMemberName" /><br />
-        <span asp-validation-for="@Model.NewMemberName" class="text-danger"></span><br />
-=======
         <input class="form-control" asp-for="@Model.NewMemberName" />
         <span asp-validation-for="@Model.NewMemberName" class="text-danger"></span>
         <br />
-        <br />
->>>>>>> 7d0f783d3c5b619a7e1a5494a9410e4488595ffc
+        <br/>
 
         <label>Member Telefon</label><br />
-        <input class="form-control" asp-for="@Model.NewMemberPhoneNumber" />
+        <input class="form-control" asp-for="@Model.NewMemberPhoneNumber"/>
         <span asp-validation-for="@Model.NewMemberPhoneNumber" class="text-danger"></span>
         <br />
         <br />
@@ -39,16 +34,13 @@
             <option value="rød" asp-for="@Model.NewMemberTeam"> Rød</option>
         </select>
         <br/>
+        <br/>
 
         <label>Member Price</label><br />
-<<<<<<< HEAD
-        <input class="form-control" asp-for="@Model.NewMemberPrice" value="minimum 50"/><br />
-=======
         <input class="form-control" asp-for="@Model.NewMemberPrice" value="50" /><br />
         <span asp-validation-for="@Model.NewMemberPrice" class="text-danger" /><br />
         <br />
->>>>>>> 7d0f783d3c5b619a7e1a5494a9410e4488595ffc
-
+        <br/>
 
         <input type="submit" value="Opret Ny Kunde" class="btn btn-success" />
         <input type="submit" value="Fortryd" class="btn btn-danger" asp-page-handler="Cancel" />
