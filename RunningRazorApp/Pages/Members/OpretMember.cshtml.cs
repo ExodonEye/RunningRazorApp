@@ -34,6 +34,7 @@ namespace RunningRazorApp.Pages.Members
         public string NewMemberTeam { get; set; }
 
         [BindProperty]
+        [Required(ErrorMessage = "Most be higher than 0")]
         public double NewMemberPrice { get; set; }
 
         //Property til fejlbesked

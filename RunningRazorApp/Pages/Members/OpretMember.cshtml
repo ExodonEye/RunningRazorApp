@@ -12,13 +12,15 @@
     <div class="form-group>">
 
         <label>Member Name</label><br />
-        <input class="form-control" asp-for="@Model.NewMemberName" /><br />
-        <span asp-validation-for="@Model.NewMemberName" class="text-danger"></span><br />
+        <input class="form-control" asp-for="@Model.NewMemberName" />
+        <span asp-validation-for="@Model.NewMemberName" class="text-danger"></span>
+        <br />
         <br />
 
         <label>Member Telefon</label><br />
-        <input class="form-control" asp-for="@Model.NewMemberPhoneNumber" /><br />
-        <span asp-validation-for="@Model.NewMemberPhoneNumber" class="text-danger"></span><br />
+        <input class="form-control" asp-for="@Model.NewMemberPhoneNumber" />
+        <span asp-validation-for="@Model.NewMemberPhoneNumber" class="text-danger"></span>
+        <br />
         <br />
 
         <select asp-for="@Model.NewMemberTeam" class="form-control">
@@ -33,7 +35,9 @@
         <br/>
 
         <label>Member Price</label><br />
-        <input class="form-control" asp-for="@Model.NewMemberPrice" /><br />
+        <input class="form-control" asp-for="@Model.NewMemberPrice" value="50" /><br />
+        <span asp-validation-for="@Model.NewMemberPrice" class="text-danger" /><br />
+        <br />
 
 
         <input type="submit" value="Opret Ny Kunde" class="btn btn-success" />
