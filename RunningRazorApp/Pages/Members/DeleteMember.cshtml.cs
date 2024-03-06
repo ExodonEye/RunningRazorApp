@@ -22,7 +22,7 @@ namespace RunningRazorApp.Pages.Members
             // Få den rigtige kunde ud fra kundenummer
             public IActionResult OnGet(int id)
             {
-                Member = _memberRepo.GetMemberById(id);
+                Member = _memberRepo.GetById(id);
                 return Page();
             }
 

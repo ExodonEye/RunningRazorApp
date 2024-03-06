@@ -22,9 +22,12 @@
 
         <label>Member Telefon</label><br />
         <input class="form-control" asp-for="@Model.NewMemberPhoneNumber" /><br />
+        <span asp-validation-for="@Model.NewMemberPhoneNumber" class="text-danger"></span><br />
+        <br />
 
         <label>Member Team</label><br />
         <input class="form-control" asp-for="@Model.NewMemberTeam" /><br />
+        <span asp-validation-for="@Model.NewMemberTeam" class="text-danger"></span><br />
 
         <label>Member Price</label><br />
         <input class="form-control" asp-for="@Model.NewMemberPrice" /><br />
