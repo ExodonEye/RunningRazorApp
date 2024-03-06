@@ -26,12 +26,15 @@ namespace RunningRazorApp.Pages.Members
         public string NewMemberName { get; set; }
 
         [BindProperty]
+        [Required(ErrorMessage = "SORRY SIR! THE PHONENUMBER IS EITHER TOO SHORT OR TOO LONG!")]
         public string NewMemberPhoneNumber { get; set; }
 
         [BindProperty]
+        [Required(ErrorMessage = "hellooooooooooo sir! this team doesnt exist")]
         public string NewMemberTeam { get; set; }
 
         [BindProperty]
+        [Required(ErrorMessage = "Most be higher than 0")]
         public double NewMemberPrice { get; set; }
 
         //Property til fejlbesked
