@@ -10,10 +10,6 @@
 @* Laver en form som har de nuværende oplysninger om kunden, men kan modtage en ny værdi hvis ændret *@
 <form method="post">
     <div class="form-group>">
-        <label>Member Id</label><br />
-        <input class="form-control" asp-for="@Model.NewMemberId" /><br />
-        <label class="text text-danger">@Model.ErrorMessage</label><br />
-        <br />
 
         <label>Member Name</label><br />
         <input class="form-control" asp-for="@Model.NewMemberName" /><br />
@@ -25,9 +21,16 @@
         <span asp-validation-for="@Model.NewMemberPhoneNumber" class="text-danger"></span><br />
         <br />
 
-        <label>Member Team</label><br />
-        <input class="form-control" asp-for="@Model.NewMemberTeam" /><br />
-        <span asp-validation-for="@Model.NewMemberTeam" class="text-danger"></span><br />
+        <select asp-for="@Model.NewMemberTeam" class="form-control">
+            <option value="" asp-for="@Model.NewMemberTeam"> Teams</option>
+            <option value="orange" asp-for="@Model.NewMemberTeam"> Orange</option>
+            <option value="sort" asp-for="@Model.NewMemberTeam"> Sort</option>
+            <option value="blå" asp-for="@Model.NewMemberTeam"> Blå</option>
+            <option value="gul" asp-for="@Model.NewMemberTeam"> Gul</option>
+            <option value="grøn" asp-for="@Model.NewMemberTeam"> Grøn</option>
+            <option value="rød" asp-for="@Model.NewMemberTeam"> Rød</option>
+        </select>
+        <br/>
 
         <label>Member Price</label><br />
         <input class="form-control" asp-for="@Model.NewMemberPrice" /><br />
