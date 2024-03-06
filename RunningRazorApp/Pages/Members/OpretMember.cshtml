@@ -18,7 +18,7 @@
         <br/>
 
         <label>Member Telefon</label><br />
-        <input class="form-control" asp-for="@Model.NewMemberPhoneNumber"/>
+        <input class="form-control" asp-for="@Model.NewMemberPhoneNumber" minlength="8" maxlength="12"/>
         <span asp-validation-for="@Model.NewMemberPhoneNumber" class="text-danger"></span>
         <br />
         <br />
