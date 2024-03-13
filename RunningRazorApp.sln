@@ -7,6 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunningRazorApp", "RunningR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RunLib", "RunLib\RunLib.csproj", "{96B40858-6E43-45DA-A2AC-E24BFE1CA4A7}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleAppRunningApp", "ConsoleAppRunningApp\ConsoleAppRunningApp.csproj", "{989AEA6E-4E41-4B37-B316-0797B2919F5F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{96B40858-6E43-45DA-A2AC-E24BFE1CA4A7} = {96B40858-6E43-45DA-A2AC-E24BFE1CA4A7}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +26,10 @@ Global
 		{96B40858-6E43-45DA-A2AC-E24BFE1CA4A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{96B40858-6E43-45DA-A2AC-E24BFE1CA4A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{96B40858-6E43-45DA-A2AC-E24BFE1CA4A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{989AEA6E-4E41-4B37-B316-0797B2919F5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{989AEA6E-4E41-4B37-B316-0797B2919F5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{989AEA6E-4E41-4B37-B316-0797B2919F5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{989AEA6E-4E41-4B37-B316-0797B2919F5F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

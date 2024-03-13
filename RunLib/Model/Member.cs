@@ -28,7 +28,7 @@ namespace RunLib.Model
         {
             get { return _id; }
             // evt. private set { _id = value; } så kan den kun tilgås inde i klassen selv
-            private set { _id = value; }
+            set { _id = value; }
         }
 
 

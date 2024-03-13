@@ -8,7 +8,7 @@ using System.Xml.Linq;
 
 namespace RunLib.Repository
 {
-    public class MemberRepository
+    public class MemberRepository : IMemberRepository
     {
         private readonly List<Member> _members;
 
