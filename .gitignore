@@ -361,3 +361,5 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+/RunLib/Model/Secret.cs
+/RunLib/Model/Secret.cs
